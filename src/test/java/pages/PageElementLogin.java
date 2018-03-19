@@ -44,7 +44,7 @@ public class PageElementLogin {
 	
 	public void txtUsuario() throws InterruptedException{
 		Thread.sleep(1000);
-		elemento = driver.findElementById("username");
+		elemento = driver.findElementById("i0116");
 		elemento.sendKeys(usuario);
 
 	}
@@ -52,7 +52,7 @@ public class PageElementLogin {
 	// campo Senha
 	public void txtSenha() throws InterruptedException{
 		Thread.sleep(500);
-		elemento = driver.findElementById("password");
+		elemento = driver.findElementById("i0118");
 		elemento.sendKeys(senha);
 	}
 	
@@ -63,7 +63,7 @@ public class PageElementLogin {
 		
 		do {
 			try {
-				elemento = driver.findElementById("btn_logar");
+				elemento = driver.findElementById("idSIButton9");
 				elemento.click();
 				aguarde=6;
 			} catch (Exception e) {

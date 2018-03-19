@@ -1,5 +1,7 @@
 package cases;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import pages.PageElementLogin;
@@ -15,11 +17,12 @@ public class CaseTestLogin extends GerenciamentoDriver{
 	
 	public void inicio() throws InterruptedException {
 		System.out.println("CronApp - Login");
-		//login.btnEntrar();
+		login.btnEntrar();
 		
-		login.setUsuario("admin");
-		login.setSenha("admin");
+		login.setUsuario("email");
+		login.setSenha("senha");
 		login.txtUsuario();
+		login.btnEntrar();
 		login.txtSenha();
 		login.btnEntrar();
 		Thread.sleep(5000);
@@ -28,6 +31,11 @@ public class CaseTestLogin extends GerenciamentoDriver{
 	@Test
 	public void executaLogin() throws InterruptedException {
 		inicio();
+	}
+	
+	@After
+	public void encerraNavegador() {
+		driver.quit();
 	}
 
 }
